@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import strokeAnimation from './components/strokeAnimation/index.vue'
 </script>
 
 <template>
   <div class="box">
-    <div class="box-top"></div>
+    <div class="box-top">
+      <strokeAnimation></strokeAnimation>
+    </div>
     <div class="box-main">
       <div class="box-main-left">
-        <div class="box-main-left-top"></div>
+        <div class="box-main-left-top">
+        </div>
         <div class="box-main-left-bottom"></div>
       </div>
       <div class="box-main-center">
@@ -32,13 +36,13 @@ body,
 .box{
   height: 100%;
   width: 100%;
-  background: url(./assets/image/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  // background: url(./assets/image/bg.jpg);
+  // background-repeat: no-repeat;
+  // background-size: 100% 100%;
   &-top{
     height: 10%;
     width: 100%;
-    // background-color: #99FF99;
+    background-color: #99FF99;
   }
   &-main{
     height: 90%;
