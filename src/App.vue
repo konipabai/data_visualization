@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import strokeAnimation from './components/strokeAnimation/index.vue'
+import lineChart from './components/line/index.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import strokeAnimation from './components/strokeAnimation/index.vue'
     <div class="box-main">
       <div class="box-main-left">
         <div class="box-main-left-top">
+          <lineChart></lineChart>
         </div>
         <div class="box-main-left-bottom"></div>
       </div>
@@ -54,11 +56,11 @@ body,
     &-left{
       height: 100%;
       width: 30%;
-      // background-color: #CCCCFF;
+      background-color: #CCCCFF;
       &-top{
         height: 50%;
         width: 100%;
-        // background-color: #FFB7DD;
+        background-color: #FFB7DD;
       }
       &-bottom{
         box-sizing: border-box;
