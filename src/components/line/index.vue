@@ -10,8 +10,8 @@ import { getCurrentInstance, onMounted } from 'vue'
 const { proxy }: any = getCurrentInstance()
 const echarts = proxy.$echarts
 type EChartsOption = echarts.EChartsOption
-const yearData = [ '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023' ]
-const incomeData = [
+const yearData:string[] = [ '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023' ]
+const incomeData:number[][] = [
     [ 52000, 57000, 62000, 64000, 64000, 67000, 61000, 55000, 69000, 70000 ],
     [ 40000, 47000, 42000, 49000, 50000, 51000, 45000, 42000, 50000, 56000 ]
 ]
