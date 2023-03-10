@@ -10,6 +10,11 @@ import { getCurrentInstance, onMounted } from 'vue'
 const { proxy }: any = getCurrentInstance()
 const echarts = proxy.$echarts
 type EChartsOption = echarts.EChartsOption
+const yearData = [ '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023' ]
+const incomeData = [
+    [ 52000, 57000, 62000, 64000, 64000, 67000, 61000, 55000, 69000, 70000 ],
+    [ 40000, 47000, 42000, 49000, 50000, 51000, 45000, 42000, 50000, 56000 ]
+]
 
 onMounted(() => {
     initEcharts()
@@ -18,7 +23,6 @@ onMounted(() => {
 const initEcharts = () => {
     const myChart = echarts.init(document.getElementById('line'))
     const option: EChartsOption = {
-
         title: {
             text: '近十年城市与农村的人均收入'
         },
@@ -45,18 +49,7 @@ const initEcharts = () => {
             {
                 type: 'category',
                 boundaryGap: false,
-                data: [
-                    '2014',
-                    '2015',
-                    '2016',
-                    '2017',
-                    '2018',
-                    '2019',
-                    '2020',
-                    '2021',
-                    '2022',
-                    '2023'
-                ]
+                data: yearData
             }
         ],
         yAxis: [
@@ -89,9 +82,7 @@ const initEcharts = () => {
                 emphasis: {
                     focus: 'series'
                 },
-                data: [
-                    52000, 57000, 62000, 64000, 64000, 67000, 61000, 55000, 69000, 70000
-                ]
+                data: incomeData[0]
             },
             {
                 name: '农村',
@@ -117,9 +108,7 @@ const initEcharts = () => {
                 emphasis: {
                     focus: 'series'
                 },
-                data: [
-                    40000, 47000, 42000, 49000, 50000, 51000, 45000, 42000, 50000, 56000
-                ]
+                data: incomeData[1]
             }
         ]
     }
