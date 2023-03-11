@@ -24,7 +24,10 @@ const initEcharts = () => {
     const myChart = echarts.init(document.getElementById('line'))
     const option: EChartsOption = {
         title: {
-            text: '近十年城市与农村的人均收入(单位:元)'
+            text: '近十年城市与农村的人均收入(单位:元)',
+            textStyle:{
+                fontSize:18
+            }
         },
         tooltip: {
             trigger: 'axis',
