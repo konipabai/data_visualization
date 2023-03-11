@@ -10,23 +10,29 @@ import { getCurrentInstance, onMounted } from 'vue'
 const { proxy }: any = getCurrentInstance()
 const echarts = proxy.$echarts
 type EChartsOption = echarts.EChartsOption
-const yearData:string[] = [ '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023' ]
-const incomeData:number[][] = [
-    [ 52000, 57000, 62000, 64000, 64000, 67000, 61000, 55000, 69000, 70000 ],
-    [ 40000, 47000, 42000, 49000, 50000, 51000, 45000, 42000, 50000, 56000 ]
-]
+let yearData: string[] = []
+let incomeData: number[][] = []
 
 onMounted(() => {
+    manageData()
     initEcharts()
 })
+
+const manageData = () => {
+    yearData = ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']
+    incomeData = [
+        [52000, 57000, 62000, 64000, 64000, 67000, 61000, 55000, 69000, 70000],
+        [40000, 47000, 42000, 49000, 50000, 51000, 45000, 42000, 50000, 56000]
+    ]
+}
 
 const initEcharts = () => {
     const myChart = echarts.init(document.getElementById('line'))
     const option: EChartsOption = {
         title: {
             text: '近十年城市与农村的人均收入(单位:元)',
-            textStyle:{
-                fontSize:18
+            textStyle: {
+                fontSize: 18
             }
         },
         tooltip: {
@@ -120,7 +126,7 @@ const initEcharts = () => {
 </script>
 
 <style scoped>
-#line{
+#line {
     height: 100%;
     width: 100%;
 }
