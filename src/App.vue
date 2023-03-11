@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import strokeAnimation from './components/strokeAnimation/index.vue'
 import lineChart from './components/line/index.vue'
+import pieChart from './components/pie/index.vue'
 </script>
 
 <template>
@@ -13,7 +14,9 @@ import lineChart from './components/line/index.vue'
         <div class="box-main-left-top">
           <lineChart></lineChart>
         </div>
-        <div class="box-main-left-bottom"></div>
+        <div class="box-main-left-bottom">
+          <pieChart></pieChart>
+        </div>
       </div>
       <div class="box-main-center">
         <div class="box-main-center-top"></div>
@@ -67,7 +70,7 @@ body,
         padding-top: 1%;
         height: 50%;
         width: 100%;
-        // background-color: #FFB7DD;
+        background-color: black;
       }
     }
     &-center{
