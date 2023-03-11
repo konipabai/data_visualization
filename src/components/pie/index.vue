@@ -30,13 +30,18 @@ const lefts: string[] = ["80%", "4%"];
 const legendData: legendType[] = [];
 
 onMounted(() => {
+    manageData()
+    initEcharts()
+})
+
+const manageData = () => {
     for (let i = 0; i < chartData.length; i++) {
         pieData1.push({
             ...chartData[i],
             itemStyle: {
                 borderRadius: 10,
-                borderColor:"black",
-                borderWidth:3
+                borderColor: "black",
+                borderWidth: 3
             },
         });
 
@@ -46,8 +51,8 @@ onMounted(() => {
                 color: colorList[i],
                 opacity: 0.21,
                 borderRadius: 5,
-                borderColor:"black",
-                borderWidth:3
+                borderColor: "black",
+                borderWidth: 3
             },
         });
 
@@ -64,11 +69,11 @@ onMounted(() => {
             textStyle: {
                 rich: {
                     legendTextStyle: {
-                        fontSize:15,
+                        fontSize: 15,
                         color: "#ffffff",
                     },
                     legendNumberStyle: {
-                        fontSize:15,
+                        fontSize: 15,
                         color: colorList[i],
                     },
                 },
@@ -76,8 +81,7 @@ onMounted(() => {
             data: [chartData[i].name],
         });
     }
-    initEcharts()
-})
+}
 
 const initEcharts = () => {
     const myChart = echarts.init(document.getElementById('pie'))
