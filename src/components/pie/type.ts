@@ -31,3 +31,8 @@ export interface pieType {
     value: number;
     name: string;
 }
+
+export interface chartType {
+    value: number;
+    name: string;
+}

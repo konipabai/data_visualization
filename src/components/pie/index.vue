@@ -6,13 +6,13 @@
 
 <script setup lang='ts'>
 import { getCurrentInstance, onMounted } from 'vue'
-import type { legendType, pieType } from './type'
+import type { legendType, pieType, chartType } from './type'
 
 const { proxy }: any = getCurrentInstance()
 const echarts = proxy.$echarts
 type EChartsOption = echarts.EChartsOption
 
-const chartData = [
+const chartData:chartType[] = [
     {
         value: 105000,
         name: "男性",
