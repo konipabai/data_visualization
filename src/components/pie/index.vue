@@ -7,23 +7,14 @@
 <script setup lang='ts'>
 import { getCurrentInstance, onMounted } from 'vue'
 import type { legendType, pieType, chartType } from './type'
+import { sexData } from './data'
 
 const { proxy }: any = getCurrentInstance()
 const echarts = proxy.$echarts
 type EChartsOption = echarts.EChartsOption
 
-const chartData:chartType[] = [
-    {
-        value: 105000,
-        name: "男性",
-    },
-    {
-        value: 95000,
-        name: "女性",
-    }
-];
 const colorList: string[] = ['#81EDD2', '#B0FA93'];
-const sum: number = chartData.reduce((per, cur) => per + cur.value, 0);
+const sum: number = sexData.reduce((per, cur) => per + cur.value, 0);
 const pieData1: pieType[] = [];
 const pieData2: pieType[] = [];
 const lefts: string[] = ["80%", "4%"];
@@ -35,9 +26,9 @@ onMounted(() => {
 })
 
 const manageData = () => {
-    for (let i = 0; i < chartData.length; i++) {
+    for (let i = 0; i < sexData.length; i++) {
         pieData1.push({
-            ...chartData[i],
+            ...sexData[i],
             itemStyle: {
                 borderRadius: 10,
                 borderColor: "black",
@@ -46,7 +37,7 @@ const manageData = () => {
         });
 
         pieData2.push({
-            ...chartData[i],
+            ...sexData[i],
             itemStyle: {
                 color: colorList[i],
                 opacity: 0.21,
@@ -56,7 +47,7 @@ const manageData = () => {
             },
         });
 
-        const legend: string = parseInt((chartData[i].value / sum) * 100 as any) + "%";
+        const legend: string = parseInt((sexData[i].value / sum) * 100 as any) + "%";
         legendData.push({
             show: true,
             icon: "circle",
@@ -65,7 +56,7 @@ const manageData = () => {
             itemStyle: {
                 color: colorList[i],
             },
-            formatter: `{legendTextStyle|` + chartData[i].name + `}` + `\n` + `{legendNumberStyle|` + legend + `}`,
+            formatter: `{legendTextStyle|` + sexData[i].name + `}` + `\n` + `{legendNumberStyle|` + legend + `}`,
             textStyle: {
                 rich: {
                     legendTextStyle: {
@@ -78,7 +69,7 @@ const manageData = () => {
                     },
                 },
             },
-            data: [chartData[i].name],
+            data: [sexData[i].name],
         });
     }
 }
