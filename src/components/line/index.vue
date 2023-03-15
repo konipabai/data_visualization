@@ -6,25 +6,15 @@
 
 <script setup lang='ts'>
 import { getCurrentInstance, onMounted } from 'vue'
+import { yearData, incomeData } from './data'
 
 const { proxy }: any = getCurrentInstance()
 const echarts = proxy.$echarts
 type EChartsOption = echarts.EChartsOption
-let yearData: string[] = []
-let incomeData: number[][] = []
 
 onMounted(() => {
-    manageData()
     initEcharts()
 })
-
-const manageData = () => {
-    yearData = ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023']
-    incomeData = [
-        [52000, 57000, 62000, 64000, 64000, 67000, 61000, 55000, 69000, 70000],
-        [40000, 47000, 42000, 49000, 50000, 51000, 45000, 42000, 50000, 56000]
-    ]
-}
 
 const initEcharts = () => {
     const myChart = echarts.init(document.getElementById('line'))
@@ -91,7 +81,7 @@ const initEcharts = () => {
                 emphasis: {
                     focus: 'series'
                 },
-                data: incomeData[0]
+                data: incomeData[0].data
             },
             {
                 name: '农村',
@@ -117,7 +107,7 @@ const initEcharts = () => {
                 emphasis: {
                     focus: 'series'
                 },
-                data: incomeData[1]
+                data: incomeData[1].data
             }
         ]
     }
