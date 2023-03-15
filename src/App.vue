@@ -2,6 +2,7 @@
 import strokeAnimation from './components/strokeAnimation/index.vue'
 import lineChart from './components/line/index.vue'
 import pieChart from './components/pie/index.vue'
+import lineRace from './components/lineRace/index.vue'
 </script>
 
 <template>
@@ -20,7 +21,9 @@ import pieChart from './components/pie/index.vue'
       </div>
       <div class="box-main-center">
         <div class="box-main-center-top"></div>
-        <div class="box-main-center-bottom"></div>
+        <div class="box-main-center-bottom">
+          <lineRace></lineRace>
+        </div>
       </div>
       <div class="box-main-right">
         <div class="box-main-right-top"></div>
@@ -78,18 +81,18 @@ body,
       width: 40%;
       padding: 0 1%;
       box-sizing: border-box;
-      // background-color: #CCCCFF;
+      background-color: #CCCCFF;
       &-top{
         height: 65%;
         width: 100%;
-        // background-color: #FFB7DD;
+        background-color: #FFB7DD;
       }
       &-bottom{
         box-sizing: border-box;
         padding-top: 1%;
         height: 35%;
         width: 100%;
-        // background-color: #FFB7DD;
+        background-color: #88ab88;
       }
     }
     &-right{
