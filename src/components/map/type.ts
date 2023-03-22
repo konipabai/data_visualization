@@ -1,5 +1,5 @@
 export interface mapType {
-    name: String;
+    name: string;
     value: number;
     height: number;
 }
