@@ -4,6 +4,7 @@ import lineChart from './components/line/index.vue'
 import pieChart from './components/pie/index.vue'
 import mapChart from './components/map/index.vue'
 import lineRace from './components/lineRace/index.vue'
+import barChart from './components/bar/index.vue'
 </script>
 
 <template>
@@ -29,7 +30,9 @@ import lineRace from './components/lineRace/index.vue'
         </div>
       </div>
       <div class="box-main-right">
-        <div class="box-main-right-top"></div>
+        <div class="box-main-right-top">
+          <barChart></barChart>
+        </div>
         <div class="box-main-right-bottom"></div>
       </div>
     </div>
@@ -101,11 +104,11 @@ body,
     &-right{
       height: 100%;
       width: 30%;
-      // background-color: #CCCCFF;
+      background-color: #CCCCFF;
       &-top{
         height: 50%;
         width: 100%;
-        // background-color: #FFB7DD;
+        background-color: #FFB7DD;
       }
       &-bottom{
         box-sizing: border-box;
