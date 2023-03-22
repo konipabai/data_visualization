@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "echarts": "^5.4.1",
+    "echarts-gl": "^2.0.9",
     "element-plus": "^2.2.33",
     "vue": "^3.2.45"
   },

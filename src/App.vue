@@ -2,6 +2,7 @@
 import strokeAnimation from './components/strokeAnimation/index.vue'
 import lineChart from './components/line/index.vue'
 import pieChart from './components/pie/index.vue'
+import mapChart from './components/map/index.vue'
 import lineRace from './components/lineRace/index.vue'
 </script>
 
@@ -20,7 +21,9 @@ import lineRace from './components/lineRace/index.vue'
         </div>
       </div>
       <div class="box-main-center">
-        <div class="box-main-center-top"></div>
+        <div class="box-main-center-top">
+          <mapChart></mapChart>
+        </div>
         <div class="box-main-center-bottom">
           <lineRace></lineRace>
         </div>
@@ -92,7 +95,7 @@ body,
         padding-top: 1%;
         height: 35%;
         width: 100%;
-        background-color: #88ab88;
+        background-color: #99FF99;
       }
     }
     &-right{
