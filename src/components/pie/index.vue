@@ -6,7 +6,7 @@
 
 <script setup lang='ts'>
 import { getCurrentInstance, onMounted } from 'vue'
-import type { legendType, pieType, chartType } from './type'
+import type { legendType, pieType } from './type'
 import { sexData } from './data'
 
 const { proxy }: any = getCurrentInstance()
