@@ -85,7 +85,6 @@ const initEcharts = () => {
             textStyle: {
                 color: "white",
                 fontSize: 18,
-                fontWeight: "bold",
             },
             subtextStyle: {
                 color: "white",

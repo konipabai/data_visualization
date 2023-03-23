@@ -27,6 +27,9 @@ const initEcharts = () => {
     const option: EChartsOption = {
         title: {
             text: "2023年各国人口排行TOP5(单位:亿)",
+            textStyle: {
+                fontSize: 18,
+            },
         },
         tooltip: {
             trigger: "axis",
