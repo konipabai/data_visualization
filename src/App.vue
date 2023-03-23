@@ -5,6 +5,7 @@ import pieChart from './components/pie/index.vue'
 import mapChart from './components/map/index.vue'
 import lineRace from './components/lineRace/index.vue'
 import barChart from './components/bar/index.vue'
+import scatterChart from './components/scatter/index.vue'
 </script>
 
 <template>
@@ -33,7 +34,9 @@ import barChart from './components/bar/index.vue'
         <div class="box-main-right-top">
           <barChart></barChart>
         </div>
-        <div class="box-main-right-bottom"></div>
+        <div class="box-main-right-bottom">
+          <scatterChart></scatterChart>
+        </div>
       </div>
     </div>
   </div>
@@ -115,7 +118,7 @@ body,
         padding-top: 1%;
         height: 50%;
         width: 100%;
-        // background-color: #FFB7DD;
+        background-color: black;
       }
     }
   }
