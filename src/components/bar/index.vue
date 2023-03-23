@@ -85,7 +85,7 @@ const initEcharts = () => {
                 data: barData.map((item, i) => {
                     var itemStyle = {
                         color: colorList[i],
-                        barBorderRadius: [10, 10, 10, 10],
+                        borderRadius: [10, 10, 10, 10],
                     };
                     return {
                         value: item.value,
