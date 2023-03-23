@@ -167,11 +167,13 @@ const initEcharts = () => {
                 itemStyle: {
                     color: 'rgba(75, 126, 203,.1)'
                 },
+                tooltip:{
+                    show: false
+                },
                 silent: false,
                 data: [
                     {
-                        value: 100,
-                        name: 'all'
+                        value: 100
                     }
                 ]
             }
