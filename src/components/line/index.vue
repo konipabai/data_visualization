@@ -40,10 +40,10 @@ const initEcharts = () => {
             right: 0
         },
         grid: {
-            left: '2%',
+            left: '11%',
             right: '4%',
-            bottom: '1%',
-            containLabel: true
+            top: '15%',
+            bottom: '8%',
         },
         xAxis: [
             {
