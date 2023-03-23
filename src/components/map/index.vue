@@ -1,7 +1,8 @@
 <template>
-    <div id="map">
-
+    <div style="overflow:hidden;width: 100%;height: 100%;">
+        <div id="map"> </div>
     </div>
+    
 </template>
 
 <script setup lang='ts'>
@@ -30,6 +31,7 @@ const initEcharts = () => {
         tooltip: {
             show: true,
             formatter: '{b}: {c}',
+            confine: true
         },
         visualMap: {
             bottom: 20,

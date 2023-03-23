@@ -1,5 +1,7 @@
 <template>
-    <div id="strokeAnimation"></div>
+    <div style="overflow:hidden;width: 100%;height: 100%;">
+        <div id="strokeAnimation"></div>
+    </div>
 </template>
 
 <script setup lang='ts'>

@@ -1,7 +1,8 @@
 <template>
-    <div id="pie">
-
+    <div style="overflow:hidden;width: 100%;height: 100%;">
+        <div id="pie"></div>
     </div>
+    
 </template>
 
 <script setup lang='ts'>
@@ -98,6 +99,7 @@ const initEcharts = () => {
             textStyle: {
                 color: "#fff",
             },
+            confine: true
         },
         legend: legendData,
         color: colorList,

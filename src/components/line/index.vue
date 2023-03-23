@@ -1,6 +1,6 @@
 <template>
-    <div id="line">
-
+    <div style="overflow:hidden;width: 100%;height: 100%;">
+        <div id="line"></div>
     </div>
 </template>
 
@@ -32,7 +32,8 @@ const initEcharts = () => {
                 label: {
                     backgroundColor: '#6a7985'
                 }
-            }
+            },
+            confine: true
         },
         legend: {
             data: ['城市', '农村'],

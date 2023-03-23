@@ -1,7 +1,8 @@
 <template>
-    <div id="lineRace">
-
+    <div style="overflow:hidden;width: 100%;height: 100%;">
+        <div id="lineRace"></div>
     </div>
+    
 </template>
 
 <script setup lang='ts'>
@@ -69,7 +70,8 @@ const initEcharts = () => {
                 label: {
                     backgroundColor: '#6a7985'
                 }
-            }
+            },
+            confine: true
         },
         grid: {
             left: 55,
