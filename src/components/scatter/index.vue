@@ -62,7 +62,7 @@ const initEcharts = () => {
                 type: 'scatter',
                 data: scatterData,
                 itemStyle: {
-                    color: '#00CC66'
+                    color: '#9AE0EC'
                 },
             }
         ]
