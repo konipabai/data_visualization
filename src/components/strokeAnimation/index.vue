@@ -23,15 +23,15 @@ const initEcharts = () => {
                 {
                     type: 'text',
                     left: 'center',
-                    bottom: 'middle',
+                    bottom: 18,
                     style: {
                         text: '数据可视化大屏',
-                        fontSize: 60,
+                        fontSize: 40,
                         fontWeight: 'bold',
                         lineDash: [0, 200],
                         lineDashOffset: 0,
                         fill: 'transparent',
-                        stroke: '#000',
+                        stroke: '#fff',
                         lineWidth: 1
                     },
                     keyframeAnimation: {
