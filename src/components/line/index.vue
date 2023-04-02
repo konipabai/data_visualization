@@ -1,6 +1,8 @@
 <template>
-    <div style="overflow:hidden;width: 100%;height: 100%;">
+    <div style="overflow:hidden;width: 100%;height: 100%; position: relative;">
+        <img src="../../assets/image/left_line.png" class="img-left">
         <div id="line"></div>
+        <img src="../../assets/image/right_line.png" class="img-right">
     </div>
 </template>
 
@@ -20,13 +22,20 @@ const initEcharts = () => {
     const myChart = echarts.init(document.getElementById('line'))
     const option: EChartsOption = {
         title: {
-            text: '近十年城市与农村的人均收入(单位:元)',
+            text: '近五年城乡人均收入(单位:千元)',
+            top: '8%',
+            left: '1%',
             textStyle: {
+                color: "white",
                 fontSize: 18
-            }
+            },
         },
         tooltip: {
             trigger: 'axis',
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            textStyle: {
+                color: "#fff",
+            },
             axisPointer: {
                 type: 'cross',
                 label: {
@@ -36,25 +45,38 @@ const initEcharts = () => {
             confine: true
         },
         legend: {
-            data: ['城市', '农村'],
-            right: 0
+            data: ['城市', '乡村'],
+            right: '4%',
+            top: '5%',
+            orient:"vertical",
+            textStyle: {
+                fontSize: 12,
+                color: "#fff",
+            },
+            icon: "circle",
         },
         grid: {
-            left: '11%',
-            right: '4%',
-            top: '15%',
-            bottom: '8%',
+            left: '10%',
+            right: '6%',
+            top: '23%',
+            bottom: '12%',
         },
         xAxis: [
             {
                 type: 'category',
                 boundaryGap: false,
-                data: yearData
+                data: yearData,
+                axisLabel:{
+                    color: "#fff"
+                }
             }
         ],
         yAxis: [
             {
-                type: 'value'
+                type: 'value',
+                axisLabel:{
+                    color: "#fff"
+                }
             }
         ],
         series: [
@@ -85,7 +107,7 @@ const initEcharts = () => {
                 data: incomeData[0].data
             },
             {
-                name: '农村',
+                name: '乡村',
                 type: 'line',
                 smooth: true,
                 lineStyle: {
@@ -120,5 +142,15 @@ const initEcharts = () => {
 #line {
     height: 100%;
     width: 100%;
+}
+.img-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.img-right {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 </style>
