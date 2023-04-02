@@ -24,9 +24,9 @@ export const barData: barType[] = [
 ];
 
 export const colorList: string[] = [
-    "#f36c6c",
-    "#e6cf4e",
-    "#20d180",
-    "#0093ff",
-    "#e391e4",
+    '#D7FFFF',
+    '#80FD78',
+    '#E6FF00',
+    '#FF8000',
+    '#FF5159',
 ];
