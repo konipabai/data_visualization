@@ -38,7 +38,7 @@ const initEcharts = () => {
             text: ['高', '低'],
             calculable: true,
             inRange: {
-                color: ['#CCFFE5', '#006633']
+                color: ['#D7FFFF', '#80FD78', '#E6FF00', '#FF8000', '#FF0000']
             }
         },
         geo3D: {
@@ -69,7 +69,7 @@ const initEcharts = () => {
                 itemStyle: {
                     opacity: 1,
                     borderWidth: 0.5,
-                    borderColor: '#00FFF8',
+                    borderColor: 'gray',
                 },
                 data: mapsData,
             },
