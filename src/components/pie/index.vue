@@ -85,7 +85,7 @@ const initEcharts = () => {
             subtext: "总人数\n(单位:万)\n200000",
             left: "center",
             top: 20,
-            itemGap: 110,
+            itemGap: 115,
             textStyle: {
                 color: "white",
                 fontSize: 18,
