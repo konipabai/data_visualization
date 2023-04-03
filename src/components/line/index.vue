@@ -1,5 +1,5 @@
 <template>
-    <div style="overflow:hidden;width: 100%;height: 100%; position: relative;">
+    <div class="outer-box">
         <img src="../../assets/image/left_line.png" class="img-left">
         <div id="line"></div>
         <img src="../../assets/image/right_line.png" class="img-right">
@@ -139,6 +139,13 @@ const initEcharts = () => {
 </script>
 
 <style scoped>
+.outer-box {
+    overflow:hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(204, 231, 239, 0.1);
+}
 #line {
     height: 100%;
     width: 100%;
