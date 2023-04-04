@@ -59,7 +59,7 @@ const initEcharts = () => {
             left: '10%',
             right: '6%',
             top: '22%',
-            bottom: '12%',
+            bottom: '11%',
         },
         xAxis: [
             {
