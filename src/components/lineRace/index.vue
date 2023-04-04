@@ -1,6 +1,10 @@
 <template>
-    <div style="overflow:hidden;width: 100%;height: 100%;">
+    <div class="outer-box">
         <div id="lineRace"></div>
+        <img src="../../assets/image/left_top.png" class="img-left-top">
+        <img src="../../assets/image/right_top.png" class="img-right-top">
+        <img src="../../assets/image/left_bottom.png" class="img-left-bottom">
+        <img src="../../assets/image/right_bottom.png" class="img-right-bottom">
     </div>
     
 </template>
@@ -25,6 +29,7 @@ const manageData = () => {
     yearData = yearList
     for (let i = 0; i < lineRaceData.length; i++) {
         CountryData.push({
+            name: lineRaceData[i].Country,
             data: lineRaceData[i].data,
             type: 'line',
             smooth: true,
@@ -51,33 +56,45 @@ const initEcharts = () => {
         animationDuration: 5000,
         title: {
             text: '近十年世界国家GDP的TOP5(单位:亿)',
+            top: '4%',
+            left: 'center',
             textStyle: {
+                color: "#ffffff",
                 fontSize: 18
             }
         },
-        xAxis: {
-            type: 'category',
-            data: yearData
-        },
-        yAxis: {
-            type: 'value'
-        },
         tooltip: {
-            order: 'valueDesc',
             trigger: 'axis',
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            textStyle: {
+                color: "#fff",
+            },
             axisPointer: {
                 type: 'cross',
                 label: {
                     backgroundColor: '#6a7985'
                 }
             },
-            confine: true
+            confine: true,
         },
         grid: {
-            left: 55,
-            right: 10,
-            top: 35,
-            bottom: 25
+            left: '11%',
+            right: '4%',
+            top: '23%',
+            bottom: '12%',
+        },
+        xAxis: {
+            type: 'category',
+            data: yearData,
+            axisLabel:{
+                color: "#fff"
+            }
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel:{
+                color: "#fff"
+            }
         },
         series: CountryData
     };
@@ -87,8 +104,36 @@ const initEcharts = () => {
 </script>
 
 <style scoped>
-#lineRace {
-    height: 100%;
+.outer-box {
+    overflow:hidden;
     width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(204, 231, 239, 0.1);
+}
+#lineRace {
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+    border: 2px solid #044BBE;
+}
+.img-left-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.img-right-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.img-left-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.img-right-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 </style>
