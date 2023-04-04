@@ -23,8 +23,8 @@ const initEcharts = () => {
     const option: EChartsOption = {
         title: {
             text: '近五年城乡人均收入(单位:千元)',
-            top: '8%',
-            left: '1%',
+            top: '6%',
+            left: '5%',
             textStyle: {
                 color: "white",
                 fontSize: 18
@@ -46,8 +46,8 @@ const initEcharts = () => {
         },
         legend: {
             data: ['城市', '乡村'],
-            right: '4%',
-            top: '5%',
+            right: '6%',
+            top: '3%',
             orient:"vertical",
             textStyle: {
                 fontSize: 12,
@@ -58,7 +58,7 @@ const initEcharts = () => {
         grid: {
             left: '10%',
             right: '6%',
-            top: '23%',
+            top: '22%',
             bottom: '12%',
         },
         xAxis: [
