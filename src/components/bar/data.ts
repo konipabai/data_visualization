@@ -2,11 +2,11 @@ import type { barType } from "./type";
 export const barData: barType[] = [
     {
         value: 2,
-        Country: "巴基斯坦",
+        Country: "巴西",
     },
     {
         value: 3,
-        Country: "印度尼西亚",
+        Country: "俄罗斯",
     },
     {
         value: 6,
