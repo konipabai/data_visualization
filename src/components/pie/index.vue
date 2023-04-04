@@ -84,7 +84,7 @@ const initEcharts = () => {
             text: "2023年男女人口比例",
             subtext: "总人数\n(单位:万)\n200000",
             left: "center",
-            top: 20,
+            top: '6%',
             itemGap: 115,
             textStyle: {
                 color: "white",
