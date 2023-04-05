@@ -32,7 +32,7 @@ const initEcharts = () => {
         },
         grid: {
             left: '14%',
-            right: '9%',
+            right: '10%',
             top: '25%',
             bottom: '10%',
         },
@@ -120,6 +120,7 @@ const initEcharts = () => {
     height: 100%;
     position: relative;
     background-color: rgba(204, 231, 239, 0.1);
+    border-radius: 8% 0 8% 0;
 }
 #scatter {
     height: 100%;

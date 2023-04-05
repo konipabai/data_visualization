@@ -193,6 +193,7 @@ const initEcharts = () => {
     height: 100%;
     position: relative;
     background-color: rgba(204, 231, 239, 0.1);
+    border-radius: 8% 0 8% 0;
 }
 #pie {
     height: 100%;

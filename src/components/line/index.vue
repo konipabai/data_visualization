@@ -57,9 +57,9 @@ const initEcharts = () => {
         },
         grid: {
             left: '10%',
-            right: '6%',
+            right: '7%',
             top: '22%',
-            bottom: '11%',
+            bottom: '10.5%',
         },
         xAxis: [
             {
@@ -145,6 +145,7 @@ const initEcharts = () => {
     height: 100%;
     position: relative;
     background-color: rgba(204, 231, 239, 0.1);
+    border-radius: 8% 0 8% 0;
 }
 #line {
     height: 100%;

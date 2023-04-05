@@ -68,11 +68,11 @@ body,
       padding-top: 2%;
       box-sizing: border-box;
       &-top{
-        height: 47%;
+        height: 48%;
         width: 100%;
       }
       &-bottom{
-        height: 47%;
+        height: 48%;
         width: 100%;
         position: absolute;
         bottom: 0;
@@ -110,11 +110,11 @@ body,
       padding-top: 2%;
       box-sizing: border-box;
       &-top{
-        height: 47%;
+        height: 48%;
         width: 100%;
       }
       &-bottom{
-        height: 47%;
+        height: 48%;
         width: 100%;
         position: absolute;
         bottom: 0;

@@ -23,7 +23,7 @@ const initEcharts = () => {
                 {
                     type: 'text',
                     left: 'center',
-                    bottom: 18,
+                    bottom: "22%",
                     style: {
                         text: '数据可视化大屏',
                         fontSize: 40,
