@@ -2,6 +2,10 @@
 
 ## 效果展示
 
+### 网页展示
+
+[点我查看网页展示](https://konipabai.github.io/data_visualization/)
+
 ### GIF展示
 
 ![image](https://github.com/konipabai/data_visualization/blob/master/src/assets/image/show-gif.gif?raw=true)
@@ -74,7 +78,21 @@
 
 
 
-后续可能会 添加 / 使用 的东西：
+## 使用的技术：
+
+**①** Vue3
+
+**②** Vite
+
+**③** TypeScript
+
+**④** Less
+
+**⑤** Echarts
+
+
+
+## 后续可能会 添加 / 使用 的东西：
 
 **①** 左右抽屉。
 
