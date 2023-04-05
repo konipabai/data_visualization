@@ -25,7 +25,7 @@ onMounted(() => {
 
 const initEcharts = () => {
     const myChart = echarts.init(document.getElementById('map'))
-    const option: EChartsOption = {
+    const option = {
         title: {
             text: "2023年各省GDP总值(单位:千亿)",
             top: "5%",
